@@ -1,5 +1,3 @@
-package Übung6;
-
 public class Waffe {
     // Hier haben wir ein Enum, das die Waffentypen enthält.
     enum Waffentyp {
@@ -16,26 +14,26 @@ public class Waffe {
     public int calcTrefferPunkte() {
         // Hier wird das Ergebnis des Würfels in der Variable w6Ergebnis gespeichert.
         Wuerfel w6 = new Wuerfel(6);
-        
+
         switch (_typ) { // Hier nehmen wir den Waffentyp als Parameter, um die Trefferpunkte zu berechnen.
             case Hand:
-            // Wenn Gladiatoren mit der Hand angreifen, geben wir nur das Ergebnis des Würfels zurück.
-                return w6.wuerfle(); 
+                // Wenn Gladiatoren mit der Hand angreifen, geben wir nur das Ergebnis des Würfels zurück.
+                return w6.wuerfle();
             case Kurzschwert:
-            // Wenn Gladiatoren mit dem Kurzschwert angreifen, geben wir das Ergebnis des Würfels + 2 zurück.
-                return w6.wuerfle() + 2; 
+                // Wenn Gladiatoren mit dem Kurzschwert angreifen, geben wir das Ergebnis des Würfels + 2 zurück.
+                return w6.wuerfle() + 2;
             case Schwert:
-            // Wenn Gladiatoren mit dem Schwert angreifen, geben wir das Ergebnis des Würfels + 4 zurück.
-                return w6.wuerfle() + 4;    
+                // Wenn Gladiatoren mit dem Schwert angreifen, geben wir das Ergebnis des Würfels + 4 zurück.
+                return w6.wuerfle() + 4;
             case Speer:
-            // Wenn Gladiatoren mit dem Speer angreifen, geben wir das Ergebnis des Würfels + 3 zurück.
-                return w6.wuerfle() + 3;    
+                // Wenn Gladiatoren mit dem Speer angreifen, geben wir das Ergebnis des Würfels + 3 zurück.
+                return w6.wuerfle() + 3;
             case Dreizack:
-            // Wenn Gladiatoren mit dem Dreizack angreifen, geben wir das Ergebnis des Würfels + 5 zurück.
-                return w6.wuerfle() + 5;    
+                // Wenn Gladiatoren mit dem Dreizack angreifen, geben wir das Ergebnis des Würfels + 5 zurück.
+                return w6.wuerfle() + 5;
             case Peitsche:
-            // Wenn Gladiatoren mit der Peitsche angreifen, geben wir das Ergebnis des Würfels + 1 zurück.
-                return w6.wuerfle() + 1;    
+                // Wenn Gladiatoren mit der Peitsche angreifen, geben wir das Ergebnis des Würfels + 1 zurück.
+                return w6.wuerfle() + 1;
             default:
                 throw new RuntimeException("Kein Waffentyp!");
         }

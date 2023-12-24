@@ -1,5 +1,3 @@
-package Übung6;
-
 public class Gladiator {
 
     // Aufgabe 2.a
@@ -14,8 +12,7 @@ public class Gladiator {
 
     public Gladiator(String name) {
         // Aufgabe 2.b
-        Wuerfel w6 = new Wuerfel(6);// ----> Hier rufen wir den Konstruktor der Klasse Wuerfel auf. (6 Seitige
-                                    // Würfel)
+        Wuerfel w6 = new Wuerfel(6);//→ Hier rufen wir den Konstruktor der Klasse Wuerfel auf.
         this._name = name;
         this.set_name(name);
         _at = 5 + w6.wuerfle();
@@ -47,17 +44,17 @@ public class Gladiator {
 
     public boolean attacke() {
         Wuerfel w20 = new Wuerfel(20);// ----> Hier rufen wir den Konstruktor der Klasse Wuerfel auf. (20 Seitige
-                                      // Würfel)
+        // Würfel)
 
         int w20Ergebnis = w20.wuerfle(); // ----> Hier speichern wir das Ergebnis des Würfels in der Variable
-                                         // w20Ergebnis.
+        // w20Ergebnis.
 
         if (w20Ergebnis <= _at) { // ----> Hier vergleichen wir das Ergebnis des Würfels mit dem Attribut _at.
             return true;// ----> Hier geben wir true zurück, wenn das Ergebnis des Würfels kleiner oder
-                        // gleich dem Attribut _at ist.
+            // gleich dem Attribut _at ist.
         } else {
             return false; // ----> Hier geben wir false zurück, wenn das Ergebnis des Würfels größer als
-                          // das Attribut _at ist.
+            // das Attribut _at ist.
         }
     }
 
@@ -66,23 +63,22 @@ public class Gladiator {
         Wuerfel w20 = new Wuerfel(20);// ----> Hier rufen wir den Konstruktor der Klasse Wuerfel auf.
 
         int w20Ergebnis = w20.wuerfle(); // ----> Hier speichern wir das Ergebnis des Würfels in der Variable
-                                         // w20Ergebnis.
+        // w20Ergebnis.
 
         if (w20Ergebnis <= _pa) { // ----> Hier vergleichen wir das Ergebnis des Würfels mit dem Attribut _pa.
             return true;// ----> Hier geben wir true zurück, wenn das Ergebnis des Würfels kleiner oder
-                        // gleich dem Attribut _pa ist.
+            // gleich dem Attribut _pa ist.
         } else {
             return false; // ----> Hier geben wir false zurück, wenn das Ergebnis des Würfels größer als
-                          // das Attribut _pa ist.
+            // das Attribut _pa ist.
         }
     }
 
     // Aufgabe 2.e
 
-    public boolean nehmeSchaden(int tp) { // ----> Hier wird die Methode nehmeSchaden mit dem Parameter int tp
-                                          // definiert.
+    public boolean nehmeSchaden(int tp) { // ----> Hier wird die Methode nehmeSchaden mit dem Parameter int tp definiert.
         int schadenPunkte = tp - _rs; // ----> Hier wird die Variable schadenPunkte definiert. Sie ist gleich dem
-                                      // Parameter tp - dem Attribut _rs.
+        // Parameter tp - dem Attribut _rs.
 
         set_le(get_le() - schadenPunkte); // ----> Hier wird das Attribut _le um die Variable schadenPunkte reduziert.
 
@@ -118,4 +114,7 @@ public class Gladiator {
         System.out.println(gladiator.parade());
         System.out.println(gladiator.nehmeSchaden(100)); // ---> Maximus ist tot. :(
     }
+
+
+
 }

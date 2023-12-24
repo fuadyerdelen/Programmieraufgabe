@@ -1,5 +1,3 @@
-package Übung6;
-
 public class Wuerfel {
     // Attribute
     private int _seiten;  //---> Es ist private, weil es nur in der Klasse Wuerfel benutzt wird.
@@ -12,8 +10,8 @@ public class Wuerfel {
     // Methode zum Würfeln
     public int wuerfle() {
         return (int) (Math.random() * _seiten) + 1;// -----> (int) (Math.random() * _seiten) gibt eine zufällige Zahl zwischen 0 und _seiten zurück.
-                                                  // -----> (int) (Math.random() * _seiten) + 1 gibt eine zufällige Zahl zwischen 1 und _seiten + 1 zurück.
-    }     
+        // -----> (int) (Math.random() * _seiten) + 1 gibt eine zufällige Zahl zwischen 1 und _seiten + 1 zurück.
+    }
 
     // Hauptmethode zum Testen
     public static void main(String[] args) {

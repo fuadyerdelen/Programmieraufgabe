@@ -1,30 +1,14 @@
-package Übung6;
-
 public class Arena {
     // Aufgabe 3.a
     // Hier haben wir ein Array von String, das die Namen der Gladiatoren
     // geschrieben.
-    private static String[] gladiatorenNamen = {
-            "Spartacus",
-            "Commodus",
-            "Marcus Attilius",
-            "Flamma",
-            "Crixus",
-            "Verus",
-            "Priscus",
-            "Tetraites",
-            "Hermes",
-            "Carpophorus",
-            "Secutor",
-            "Retiarius",
-            "Dimachaerus",
-            "Bestiarius",
-            "Murmillo",
-            "Thraex",
-            "Myrmillo",
-            "Laquearius",
-            "Sagittarius",
-            "Andabatus"
+    static String[] gladiatorenNamen = {
+            "Spartacus", "Commodus", "Marcus Attilius",
+            "Flamma", "Crixus", "Verus", "Priscus",
+            "Tetraites", "Hermes", "Carpophorus",
+            "Secutor", "Retiarius", "Dimachaerus",
+            "Bestiarius", "Murmillo", "Thraex",
+            "Myrmillo", "Laquearius", "Sagittarius", "Andabatus"
     };
 
     // Aufgabe 3.b
@@ -39,7 +23,7 @@ public class Arena {
         int w20Erg = w20.wuerfle(); // ----> Hier speichern wir das Ergebnis von Würfel (20-Seiteigen)
 
         // hier wird ein Objekt der Klasse Gladiator erzeugt. Die Attribute habe ich
-        // zuverlessig gestellt.
+        // zuverlässig gestellt.
         _gladiator1 = new Gladiator(gladiatorenNamen[w20Erg - 1]);
         w20Erg = w20.wuerfle(); // ----> Hier musste ich nochmal würfeln, weil ich ein anderes Ergebnis brauche.
         _gladiator2 = new Gladiator(gladiatorenNamen[w20Erg - 1]);
@@ -51,21 +35,13 @@ public class Arena {
     // Aufgabe 3.d
     public boolean starteKampfRunde(Gladiator angr, Gladiator vert) {
 
-        // boolean kampffaehig = true;
-
-        // diese Wuerfelmethoden sind nicht mehr notwendig, weil wir die Methode aus der Klasse Waffe benutzen.
-        
-        //Wuerfel w6 = new Wuerfel(6);
-        //int w6Erg = w6.wuerfle();
-
         String angrStr = "-";
         String vertStr = "-";
         boolean hitSuccessful = false;
 
         int schaden = 0;
 
-        // Wenn Gladiator1 attack erfolgreich (ture) ist, gebe ich den Konsole X. Wenn
-        // nicht -.
+        // Wenn Gladiator1 attack erfolgreich (ture) ist, gebe ich den Konsole X. Wenn nicht -.
         if (angr.attacke()) {
             angrStr = "X";
 
@@ -76,8 +52,7 @@ public class Arena {
             }
         }
 
-        // Wenn Gladiator2 parade erfolgreich (ture) ist, gebe ich den Konsole O. Wenn
-        // nicht -.
+        // Wenn Gladiator2 parade erfolgreich (ture) ist, gebe ich der Konsole O. Wenn nicht -.
         if (angr == _gladiator1) {
             System.out.printf("%-20s%-20s", angrStr, vertStr);
         } else {
@@ -116,7 +91,7 @@ public class Arena {
         while (arena.starteKampfRunde(arena._gladiator1, arena._gladiator2)) {
 
         }
-        
+
     }
 
 }
